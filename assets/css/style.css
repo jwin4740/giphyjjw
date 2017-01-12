@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+
+#buttonscontainer {
+    border: solid 3px black;
+    height: 90px;
+}
+
+.genbuttons {
+    padding: 5px;
+    margin: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    border: solid 1px black;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.genbuttons:hover {
+    padding: 5px;
+    margin: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    border: solid 1px black;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+#showgifs {
+    float: left;
+    margin: 10px 20px 0px 0px;
+    width: 800px;
+    height: 900px;
+    border: solid 3px black;
+}
+
+#search {
+    float: right;
+    margin: 10px 0px 0px 10px;
+    width: 500px;
+    height: 300px;
+    border: solid 3px black;
+}
+
+#searchvalue {
+	margin: 5px;
+    width: 450px;
+    height: 25px;
+    border: solid 1px gray;
+    border-radius: 5px;
+}
+
+.gifs{
+	margin: 5px;
+	float: left;
+}
