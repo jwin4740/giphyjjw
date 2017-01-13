@@ -7,7 +7,7 @@
     height: 90px;
 }
 
-.genbuttons {
+.buttonstyle {
     padding: 5px;
     margin: 5px;
     font-size: 15px;
@@ -19,7 +19,7 @@
     cursor: pointer;
 }
 
-.genbuttons:hover {
+.buttonstyle:hover {
     padding: 5px;
     margin: 5px;
     font-size: 15px;
