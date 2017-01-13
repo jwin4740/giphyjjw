@@ -55,9 +55,21 @@
     border-radius: 5px;
 }
 
+.dyno{
+    float: left;
+    text-align: center;
+    padding: 5px;
+    
+}
+.rating{
+    
+    margin: 2px;
+    
+}
+
 .gifs{
-	margin: 5px 5px 10px 5px;
-	float: left;
+	margin: 0px 5px 10px 5px;
+	clear: both;
 	width: 200px;
 	height: 150px;
 }

@@ -5,8 +5,8 @@ $(document).ready(function() {
   $("#submitme").on("click", function() {
 
       // the url that you grab data from
-      var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=seinfeld&rating=pg";
-
+      var tvshow = $("#searchvalue").val().trim();
+      var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + tvshow + "&api_key=dc6zaTOxFJmzC&limit=10&rating=pg"; 
       // runs the ajax call 
       $.ajax({
         url: queryURL,
@@ -17,21 +17,24 @@ $(document).ready(function() {
       .done(function(response) {
       	console.log(response);
         // takes the image retrieved from th url and stores in in a variable
-        var imageUrl = response.data.image_original_url;
+       
         console.log(queryURL);
 
-        //creates an image element and stores it in a variable
+       for (var i = 0; i < 10; i++)
+       {
+       var imageUrl = response.data[i].images.original.url;
+       var rating = response.data[i].rating;
+        var picDiv = $("<div class='dyno dynadiv" + i + "'> <h3 class='rating'> Rating: " + rating + "</h3></div>");
         
-        var catImage = $("<img>");
+        var image = $("<img>");
 
-        //gives attributes to the image
-        catImage.attr("class", "gifs");
-        catImage.attr("src", imageUrl);
-        catImage.attr("alt", "cat image");
+        image.attr("class", "gifs");
+        image.attr("src", imageUrl);
+        image.attr("alt", "tv image");
+        $("#showgifs").append(picDiv);
+        $(".dynadiv" + i).append(image);
 
-        //prepends the image into the div id="images"
-        $("#showgifs").append(catImage);
-        $("#showgifs").append(catImage);
+        }
       });
     });
 
