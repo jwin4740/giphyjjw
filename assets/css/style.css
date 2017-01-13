@@ -1,7 +1,10 @@
 * {
     box-sizing: border-box;
 }
-
+html {
+    background-image: url(../images/pattern.png);
+    background-size: cover;
+}
 #buttonscontainer {
     border: solid 3px black;
     height: 90px;
@@ -72,6 +75,7 @@
 	clear: both;
 	width: 200px;
 	height: 150px;
+    cursor: pointer;
 }
 
 #responseMessage{
